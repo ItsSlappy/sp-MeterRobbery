@@ -16,5 +16,5 @@ This can be used by anyone that thinks this is a cool idea and it would be a use
 
 ---
 ## Credits
-Myself
+@ItsSlappy and 
 @ImMacky For introducing and helping me make this project!
