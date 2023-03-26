@@ -19,6 +19,7 @@ RegisterNetEvent('sp-MeterRobbery:client:UnscrewBackplate', function()
                             flags = 17,
                         }, {}, {}, function() -- Play When Done
                             ClearPedTasks(PlayerPedId())
+                            Dispatch()
                             RecentRobbery = GetGameTimer() + Config.HeistCooldown
                             exports['ps-ui']:Circle(function(success)
                                 if success then
@@ -33,7 +34,7 @@ RegisterNetEvent('sp-MeterRobbery:client:UnscrewBackplate', function()
                                         flags = 17,
                                     }, {}, {}, function() -- Play When Done
                                         ClearPedTasks(PlayerPedId())
-                                        TriggerServerEvent('sp-MeterRobberry:server:AddMoney')
+                                        TriggerServerEvent('sp-MeterRobbery:server:AddMoney')
                                     end)
                                 else
                                     QBCore.Functions.Notify('Wrong Screwdriver', 'error')
@@ -48,3 +49,8 @@ RegisterNetEvent('sp-MeterRobbery:client:UnscrewBackplate', function()
         QBCore.Functions.Notify('Come back later', 'error')
     end
 end)
+
+-- Meter Robbery alert to Dispatch --
+function Dispatch()
+    exports['ps-dispatch']:MeterRobbery()
+end

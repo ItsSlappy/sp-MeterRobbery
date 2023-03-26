@@ -37,9 +37,17 @@ QBCore.Functions.CreateCallback('sp-MeterRobbery:server:ScrewDriverSet', functio
 end)
 
 -- Add Money once Parking Meter is robbed --
-RegisterNetEvent('sp-MeterRobberry:server:AddMoney', function()
+RegisterNetEvent('sp-MeterRobbery:server:AddMoney', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
 
     Player.Functions.AddMoney('cash', Config.RewardMoney, 'Parking Meter Payout')
+end)
+
+-- On Resource Start (Console Notification) --
+AddEventHandler('onResourceStart', function(resource)
+    if (GetCurrentResourceName() ~= resource) then
+        return
+    end
+    print(resource..' started successfully')
 end)

@@ -3,8 +3,8 @@ game 'gta5'
 lua54 'yes'
 
 description 'Free, open source meter robbery'
-author 'Slappy'
-version '1.0'
+author 'Slappy - Macky'
+version '1.1'
 
 server_script 'server/*.lua'
 

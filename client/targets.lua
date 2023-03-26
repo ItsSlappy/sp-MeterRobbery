@@ -1,4 +1,4 @@
--- Screw Driver Set (REPLACE ME LATER) --
+-- Screw Driver Set --
 exports['qb-target']:AddTargetModel(Config.ParkingMeterProps,  {
     options = {
       {
