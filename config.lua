@@ -17,6 +17,6 @@ Config.ParkingMeterProps = {
 
 -- Parking Meter Third-Eye / Rewards --
 Config.MeterLabel = 'Unscrew Backplate' -- Third-Eye Label
-Config.MeterIcon = 'fas fa-parking-circle' -- Third-Eye Icon
+Config.MeterIcon = 'fas fa-parking' -- Third-Eye Icon
 
 Config.RewardMoney = math.random(500, 2000) -- Reward Money ($500 - $2,000)
