@@ -35,11 +35,15 @@ RegisterNetEvent('sp-MeterRobbery:client:UnscrewBackplate', function()
                                     }, {}, {}, function() -- Play When Done
                                         ClearPedTasks(PlayerPedId())
                                         TriggerServerEvent('sp-MeterRobbery:server:AddMoney')
+                                    end, function() -- Play When Cancel
+                                        ClearPedTasks(PlayerPedId())
                                     end)
                                 else
                                     QBCore.Functions.Notify('Wrong Screwdriver', 'error')
                                 end
                             end, 2, 20)
+                        end, function() -- Play When Cancel
+                            ClearPedTasks(PlayerPedId())
                         end)
                     end
                 end, Config.RequiredItem)
