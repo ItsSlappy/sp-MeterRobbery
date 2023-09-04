@@ -4,12 +4,12 @@ local QBCore = exports['qb-core']:GetCoreObject()
 -- Police Amount On-Duty --
 QBCore.Functions.CreateCallback('sp-MeterRobbery:server:PoliceInteger', function(source, cb)
     local src = source
-    local Player = QBCore.Functions.GetPlayer(src)
+    local Player = QBCore.Functions.GetPlayers()
     local PoliceInteger = 0
 
     for i = 1, #Player do
         local xPlayer = QBCore.Functions.GetPlayer(Player[i])
-        if (xPlayer.PlayerData.job.name == 'police' and xPlayer.PlayerData.job.onduty) then
+        if xPlayer and xPlayer.PlayerData.job and xPlayer.PlayerData.job.name == 'police' and xPlayer.PlayerData.job.onduty then
             PoliceInteger = PoliceInteger + 1
         end
     end
