@@ -58,7 +58,7 @@ exports('MeterRobbery', MeterRobbery)
 ## ps-dispatch > locales > locales.lua
 ```lua
         -- Meter Robbery
-        ['meterrobbery'] = "Meter Robbery"
+        ['meterrobbery'] = "Meter Robbery",
 ```
 
 ## Usage
